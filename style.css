@@ -1,0 +1,255 @@
+/*
+ Theme Name:   Storefront Child
+ Theme URI:    http://localhost/trgovina
+ Description:  Child tema za računalniško trgovino TechShop
+ Author:       Tvoje Ime Priimek
+ Template:     storefront
+ Version:      1.0.0
+ Text Domain:  storefront-child
+*/
+
+/* ================================================
+   BARVNA SHEMA — SPREMENLJIVKE
+   ================================================ */
+:root {
+    --primary:     #0a84ff;
+    --primary-dark:#0060cc;
+    --dark:        #0d1117;
+    --dark-2:      #161b22;
+    --accent:      #30d158;
+    --accent-dark: #1fa844;
+    --text-light:  #f0f6fc;
+    --text-muted:  #8b949e;
+    --border:      #30363d;
+    --bg-body:     #f4f6f9;
+}
+
+/* ================================================
+   SPLOŠNO
+   ================================================ */
+body {
+    background-color: var(--bg-body);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #1c1c1e;
+}
+
+a { color: var(--primary); transition: color 0.2s ease; }
+a:hover { color: var(--primary-dark); }
+
+/* ================================================
+   HEADER / NAVIGACIJA
+   ================================================ */
+.site-header {
+    background-color: var(--dark) !important;
+    border-bottom: 2px solid var(--primary) !important;
+}
+
+.site-title a,
+.site-title a:visited {
+    color: var(--text-light) !important;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-title a::before { content: "💻 "; }
+
+.site-description { color: var(--text-muted) !important; font-size: 0.8em; }
+
+.main-navigation ul li a {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    padding: 8px 16px !important;
+    transition: background 0.2s ease;
+    border-radius: 4px;
+}
+
+.main-navigation ul li a:hover {
+    background-color: rgba(10,132,255,0.15) !important;
+    color: var(--primary) !important;
+}
+
+.site-header-cart .cart-contents {
+    color: var(--text-light) !important;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+/* ================================================
+   GUMBI
+   ================================================ */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 10px 20px !important;
+    font-weight: 600 !important;
+    transition: background-color 0.2s ease, transform 0.1s ease !important;
+}
+
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:hover {
+    background-color: var(--primary-dark) !important;
+    transform: translateY(-1px);
+}
+
+/* "V košarico" — zelena */
+.woocommerce a.button.add_to_cart_button,
+.woocommerce button.single_add_to_cart_button {
+    background-color: var(--accent) !important;
+}
+
+.woocommerce a.button.add_to_cart_button:hover,
+.woocommerce button.single_add_to_cart_button:hover {
+    background-color: var(--accent-dark) !important;
+}
+
+/* ================================================
+   KARTICE IZDELKOV
+   ================================================ */
+.woocommerce ul.products li.product {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    padding: 16px !important;
+    overflow: hidden;
+}
+
+.woocommerce ul.products li.product:hover {
+    box-shadow: 0 8px 24px rgba(10,132,255,0.15);
+    transform: translateY(-4px);
+}
+
+.woocommerce ul.products li.product img { border-radius: 8px; margin-bottom: 12px; }
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 1em !important;
+    font-weight: 600;
+    color: #1c1c1e;
+}
+
+.woocommerce ul.products li.product .price {
+    color: var(--primary) !important;
+    font-size: 1.1em !important;
+    font-weight: 700;
+}
+
+.woocommerce span.onsale {
+    background-color: #ff3b30 !important;
+    border-radius: 4px !important;
+    font-size: 0.75em !important;
+    padding: 3px 8px !important;
+    min-width: auto !important;
+    min-height: auto !important;
+    line-height: 1.5 !important;
+}
+
+/* ================================================
+   POSAMEZNA STRAN IZDELKA
+   ================================================ */
+.single-product div.product .product_title {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.single-product div.product .price {
+    color: var(--primary) !important;
+    font-size: 1.6em !important;
+    font-weight: 700;
+}
+
+.single-product div.product .woocommerce-product-details__short-description {
+    background: #f8f9fa;
+    border-left: 3px solid var(--primary);
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 16px;
+}
+
+/* ================================================
+   NASLOVI
+   ================================================ */
+.woocommerce-products-header__title,
+.woocommerce-page h1 {
+    font-size: 2em;
+    font-weight: 700;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* ================================================
+   KOŠARICA IN BLAGAJNA
+   ================================================ */
+.woocommerce .cart_totals {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.woocommerce .cart_totals h2 {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+/* ================================================
+   OBRAZCI
+   ================================================ */
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    border: 1.5px solid #d1d5db !important;
+    border-radius: 6px !important;
+    padding: 10px 14px !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(10,132,255,0.15) !important;
+    outline: none !important;
+}
+
+/* ================================================
+   SPOROČILA
+   ================================================ */
+.woocommerce-message  { border-top-color: var(--accent) !important; background: #f0fdf4 !important; }
+.woocommerce-error    { border-top-color: #ff3b30 !important;        background: #fff5f5 !important; }
+.woocommerce-info     { border-top-color: var(--primary) !important; background: #eff6ff !important; }
+
+/* ================================================
+   FOOTER
+   ================================================ */
+.site-footer {
+    background-color: var(--dark) !important;
+    color: var(--text-muted) !important;
+    border-top: 2px solid var(--border) !important;
+    padding: 30px 0 !important;
+}
+
+.site-footer a { color: var(--primary) !important; }
+.site-footer .site-info { font-size: 0.85em; }
+
+/* ================================================
+   ZVEZDICE
+   ================================================ */
+.woocommerce .star-rating span::before,
+.woocommerce .star-rating::before { color: #ffd60a !important; }
+
+/* ================================================
+   RESPONSIVNOST
+   ================================================ */
+@media (max-width: 768px) {
+    .site-title a { font-size: 1.2em !important; }
+    .woocommerce ul.products li.product { padding: 12px !important; }
+}
