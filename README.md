@@ -32,4 +32,4 @@ izdelana z WordPress in WooCommerce vtičnikom.
 5. Aktiviraj temo v WordPress adminu
 
 ## Avtor
-Ime Priimek — [šola], [letnik], [šolsko leto]
+Nejc Toplak — Srednja elektro-računalniška šola Maribor, 4.Cr, 2025/26
