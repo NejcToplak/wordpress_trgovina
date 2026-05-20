@@ -33,3 +33,9 @@ izdelana z WordPress in WooCommerce vtičnikom.
 
 ## Avtor
 Nejc Toplak — Srednja elektro-računalniška šola Maribor, 4.Cr, 2025/26
+
+## Uvoz baze podatkov
+1. Odpri phpMyAdmin (http://localhost/phpmyadmin)
+2. Ustvari novo bazo `wordpress_trgovina`
+3. Klikni **Uvozi** in izberi datoteko `wordpress_trgovina.sql`
+4. Klikni **Izvedi**
